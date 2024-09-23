@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+
+  <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+  <!-- https://cdnjs.com/libraries/font-awesome -->
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header>
+    <section class="topbar-section">
+      <div class="container-fluid topbar pb-lg-0 pt-lg-2 pt-2 pb-2 pb-sm-0" style="overflow: hidden; padding: 0;">
+        <div class="container">
+          <div class="row ">
+            <div class="col-lg-4 col-sm-6 col-12 top-cont d-flex justify-content-cener align-items-center">
+              <ul class="list-unstyled list-inline mx-auto">
+                <li class="list-inline-item top-phone"><a href="tel:+1234567890"><i class="fas fa-phone"></i><span>
+                      +1234567890</span></a></li>
+                <li class="list-inline-item">
+                  <a href="mailto:demo1234@gmail.com"><i class="fas fa-envelope"></i><span>
+                      demo1234@gmail.com</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-5 col-sm-4 col-12 d-flex justify-content-center    top-sale">
+              <!-- <a href="">zxcfghjkl</a> -->
+              <span>sale discount off 50%!<a href="#">Shop Now</a></span>
+            </div>
+            <div class="col-lg-2 col-sm-2 d-flex justify-content-center  top-social mt-sm-0 mt-2">
+
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="navbar-section">
+      <div class="container-fluid" style="overflow: hidden; padding: 0;">
+        <div class="side-navbar-start" style="z-index: 1; position: relative;">
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Products</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+        <div id="overlay" onclick="closeNav()"></div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-1 col-sm-1 side-nav col-1">
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+            </div>
+            <div class="col-lg-3 col-sm-1 col-1"></div>
+            <div class="col-lg-4 col-sm-6 col-6 navbar-logo">
+              My Logo
+            </div>
+            <div class="col-lg-1 col-sm-1 col-1"></div>
+
+            <div class="col-lg-3 col-sm-2 col-2 navbar-icons">
+              <a href="#">
+                <span class="search-icon" onclick="openSearch()">
+                  <i class="fas fa-search" aria-hidden="true"></i>
+                </span>
+              </a>
+              <a href="#">
+                <i class="far fa-user-circle"  data-bs-toggle="modal" data-bs-target="#userModal" ></i>
+              </a>
+    <!-- Modal -->
+    <div class="modal fade userModal" id="userModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login / Register</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Register</button>
+              </li>
+            </ul>
+  
+            <!-- Tab content -->
+            <div class="tab-content mt-3" id="myTabContent">
+              <!-- Login Form -->
+              <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                <form>
+                  <div class="mb-3">
+                    <label for="loginEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="loginEmail" placeholder="Enter email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                  </div>
+                  <button type="submit" class="btn  w-100 tab-login-btn">Login</button>
+                </form>
+              </div>
+  
+              <!-- Register Form -->
+              <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                <form>
+                  <div class="mb-3">
+                    <label for="registerEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="registerEmail" placeholder="Enter email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="registerPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="registerPassword" placeholder="Password">
+                  </div>
+                  <div class="mb-3">
+                    <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Confirm password">
+                  </div>
+                  <button type="submit" class="btn  w-100 tab-reg-btn">Register</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+              
+              <a href="#">
+                <i class="fas fa-shopping-bag"></i>
+              </a>
+
+            </div>
+          </div>
+          <!-- Fullscreen Search searchbar -->
+
+          <div id="mysearchbar" class="searchbar">
+            <span class="closebtn" onclick="closeSearch()">&times;</span>
+            <input type="text" placeholder="Search... ">
+            <!-- Search Icon -->
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="home-top-slider-section">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://m.media-amazon.com/images/S/abs-image-upload-na/4/AmazonStores/A21TJRUUN4KGV/6e5675474147f9c62691cea38d0b3978.w805.h380.jpg"
+              class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://res.cloudinary.com/makerinc/c_fill,g_auto,f_auto,q_auto:best,fl_preserve_transparency,dpr_1,w_1944,h_356/maker-live/uploads/f88b148916dae71600e56779dc9080c1/1e32f2df26e4836ba5da0ece9d653bf2/formal_banner_-_desktop.jpg"
+              class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://res.cloudinary.com/makerinc/c_fill,g_auto,f_auto,q_auto:best,fl_preserve_transparency,dpr_1,w_1944,h_356/maker-live/uploads/f88b148916dae71600e56779dc9080c1/401fa729afa08a776973f0f68bd6fcd9/banner_-_desktop.jpg"
+              class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button> -->
+      </div>
+    </section>
+
+    <section class="sets ">
+
+      <div class="container sets-apart mt-lg-5 mt-5">
+        <h2>What Sets Apart?</h2>
+        <div class="row mt-lg-5 mt-5">
+          <div class="col-lg-3 col-12 col-sm-6 apart-ipad">
+            <div class="row">
+              <div class="col-lg-4 col-sm-4 col-4 apart">
+                <img src="https://cdn.shopify.com/s/files/1/0423/3576/4634/files/image-3.jpg?v=1615803418" alt="">
+              </div>
+              <div class="col-lg-8 col-sm-8 col-8">
+                <h4>Perfect Fit</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, tempora?</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-12 col-sm-6 apart-ipad">
+            <div class="row">
+              <div class="col-lg-4 col-sm-4 col-4 apart">
+                <img src="https://cdn.shopify.com/s/files/1/0423/3576/4634/files/image-3.jpg?v=1615803418" alt="">
+              </div>
+              <div class="col-lg-8 col-sm-8 col-8">
+                <h4>Perfect Fit</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, tempora?</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-12 col-sm-6 apart-ipad">
+            <div class="row">
+              <div class="col-lg-4 col-sm-4 col-4 apart">
+                <img src="https://cdn.shopify.com/s/files/1/0423/3576/4634/files/image-3.jpg?v=1615803418" alt="">
+              </div>
+              <div class="col-lg-8 col-sm-8 col-8">
+                <h4>Perfect Fit</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, tempora?</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-12 col-sm-6 apart-ipad">
+            <div class="row">
+              <div class="col-lg-4 col-sm-4 col-4 apart">
+                <img src="https://cdn.shopify.com/s/files/1/0423/3576/4634/files/image-3.jpg?v=1615803418" alt="">
+              </div>
+              <div class="col-lg-8 col-sm-8 col-8">
+                <h4>Perfect Fit</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, tempora?</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="Must-pants mt-lg-5">
+
+      <div class="container">
+        <h1 class="text-center">TRENDING</h1>
+        <h6 class="small text-center">Top view in this week</h6>
+        <div class="row mt-lg-5">
+          <div class="col-lg-12">
+            <div class="row">
+              <!-- Trend Item 1 -->
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="#">
+                  <div class="trend item trend1">
+                    <div class="icon-group">
+                      <i class="fas fa-search"></i>
+                      <i class="far fa-eye"></i>
+                    </div>
+                    <div class="trend-cart">
+                      <p>Add To Cart</p>
+                    </div>
+                  </div>
+                </a>
+                <center>
+                  <p class="last"> Black Slim Fit Power Stretch Pants</p>
+                </center>
+                <center>
+                  <p class="last2">250.00$</p>
+                </center>
+              </div>
+              <!-- Repeat for other trend items -->
+              <!-- Trend Item 2 -->
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="#">
+                  <div class="trend item trend2">
+                    <div class="icon-group">
+                      <i class="fas fa-search"></i>
+                      <i class="far fa-eye"></i>
+                    </div>
+                    <div class="trend-cart">
+                      <p>Add To Cart</p>
+                    </div>
+                  </div>
+                </a>
+                <center>
+                  <p class="last"> Grey Slim Fit Power Stretch Pants</p>
+                </center>
+                <center>
+                  <p class="last2">90.00$</p>
+                </center>
+              </div>
+              <!-- Trend Item 3 -->
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="#">
+                  <div class="trend item trend3">
+                    <div class="icon-group">
+                      <i class="fas fa-search"></i>
+                      <i class="far fa-eye"></i>
+                    </div>
+                    <div class="trend-cart">
+                      <p>Add To Cart</p>
+
+                    </div>
+                  </div>
+                </a>
+                <center>
+                  <p class="last">Beige Slim Fit Stretch Chino Pants</p>
+                </center>
+                <center>
+                  <p class="last2">60.00$</p>
+                </center>
+              </div>
+              <!-- Trend Item 4 -->
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="#">
+                  <div class="trend item trend4">
+                    <div class="icon-group">
+                      <i class="fas fa-search"></i>
+                      <i class="far fa-eye"></i>
+                    </div>
+                    <div class="trend-cart">
+                      <p>Add To Cart</p>
+                    </div>
+                  </div>
+                </a>
+                <center>
+                  <p class="last">Pink Slim Fit Stretch Chino Pants</p>
+                </center>
+                <center>
+                  <p class="last2">200.00$</p>
+                </center>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-lg-4">
+          <div class="col-lg-12">
+            <div class="row">
+              <!-- Trend Item 1 -->
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="#">
+                  <div class="trend item trend1">
+                    <div class="icon-group">
+                      <i class="fas fa-search"></i>
+                      <i class="far fa-eye"></i>
+                    </div>
+                    <div class="trend-cart">
+                      <p>Add To Cart</p>
+                    </div>
+                  </div>
+                </a>
+                <center>
+                  <p class="last"> Black Slim Fit Power Stretch Pants</p>
+                </center>
+                <center>
+                  <p class="last2">250.00$</p>
+                </center>
+              </div>
+              <!-- Repeat for other trend items -->
+              <!-- Trend Item 2 -->
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="#">
+                  <div class="trend item trend2">
+                    <div class="icon-group">
+                      <i class="fas fa-search"></i>
+                      <i class="far fa-eye"></i>
+                    </div>
+                    <div class="trend-cart">
+                      <p>Add To Cart</p>
+                    </div>
+                  </div>
+                </a>
+                <center>
+                  <p class="last"> Grey Slim Fit Power Stretch Pants</p>
+                </center>
+                <center>
+                  <p class="last2">90.00$</p>
+                </center>
+              </div>
+              <!-- Trend Item 3 -->
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="#">
+                  <div class="trend item trend3">
+                    <div class="icon-group">
+                      <i class="fas fa-search"></i>
+                      <i class="far fa-eye"></i>
+                    </div>
+                    <div class="trend-cart">
+                      <p>Add To Cart</p>
+
+                    </div>
+                  </div>
+                </a>
+                <center>
+                  <p class="last">Beige Slim Fit Stretch Chino Pants</p>
+                </center>
+                <center>
+                  <p class="last2">60.00$</p>
+                </center>
+              </div>
+              <!-- Trend Item 4 -->
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="#">
+                  <div class="trend item trend4">
+                    <div class="icon-group">
+                      <i class="fas fa-search"></i>
+                      <i class="far fa-eye"></i>
+                    </div>
+                    <div class="trend-cart">
+                      <p>Add To Cart</p>
+                    </div>
+                  </div>
+                </a>
+                <center>
+                  <p class="last">Pink Slim Fit Stretch Chino Pants</p>
+                </center>
+                <center>
+                  <p class="last2">200.00$</p>
+                </center>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </section>
+
+    <!--  -->
+    <section class="mt-lg-5 Happy-client d-lg-block d-none">
+      <div class="container">
+        <h1 class="text-center pt-lg-5">Happy Clients</h1>
+        <h6 class="text-center small">Hear what they say about us </h6>
+      </div>
+      <div id="testimonialSlider" class="carousel slide mt-lg-5 pb-lg-5" data-bs-ride="carousel">
+        <div class="container">
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card testimonial-card">
+                    <div class="card-body testi mx-auto">
+                      <div class="review-stars mt-lg-3">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+
+                      </div>
+
+                      <h5 class="card-title mt-lg-3">Best Customer Service</h5>
+                      <p class="review-text ">" This is the best service I have ever used. Highly recommended! "</p>
+                      <h6 class=" mt-lg-4">Customer Name</h6>
+                      <span class="small">Customer From India</span>
+                      <hr class="mt-lg-4">
+                      <div class="row">
+                        <div class="col-lg-3">
+                          <img src="https://pantproject.com/cdn/shop/files/DSC6992.jpg?v=1719209621"
+                            class="rounded mb-3" alt="Profile Pic">
+
+                        </div>
+                        <div class="col-lg-8 testimonial-flex">
+                          <a href="#" class="text-left testimonial-product small">Product Name</a>
+                          <p class="small">$105.5</p>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card testimonial-card">
+                    <div class="card-body testi mx-auto">
+                      <div class="review-stars mt-lg-3">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+
+                      </div>
+
+                      <h5 class="card-title mt-lg-3">Best Customer Service</h5>
+                      <p class="review-text ">" This is the best service I have ever used. Highly recommended! "</p>
+                      <h6 class=" mt-lg-4">Customer Name</h6>
+                      <span class="small">Customer From India</span>
+                      <hr class="mt-lg-4">
+                      <div class="row">
+                        <div class="col-lg-3">
+                          <img src="https://pantproject.com/cdn/shop/files/DSC6992.jpg?v=1719209621"
+                            class="rounded mb-3" alt="Profile Pic">
+
+                        </div>
+                        <div class="col-lg-8 testimonial-flex">
+                          <a href="#" class="text-left testimonial-product small">Product Name</a>
+                          <p class="small">$105.5</p>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card testimonial-card">
+                    <div class="card-body testi mx-auto">
+                      <div class="review-stars mt-lg-3">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+
+                      </div>
+
+                      <h5 class="card-title mt-lg-3">Best Customer Service</h5>
+                      <p class="review-text ">" This is the best service I have ever used. Highly recommended! "</p>
+                      <h6 class=" mt-lg-4">Customer Name</h6>
+                      <span class="small">Customer From India</span>
+                      <hr class="mt-lg-4">
+                      <div class="row">
+                        <div class="col-lg-3">
+                          <img src="https://pantproject.com/cdn/shop/files/DSC6992.jpg?v=1719209621"
+                            class="rounded mb-3" alt="Profile Pic">
+
+                        </div>
+                        <div class="col-lg-8 testimonial-flex">
+                          <a href="#" class="text-left testimonial-product small">Product Name</a>
+                          <p class="small">$105.5</p>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Slide -->
+            <div class="carousel-item ">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card testimonial-card">
+                    <div class="card-body testi mx-auto">
+                      <div class="review-stars mt-lg-3">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+
+                      </div>
+
+                      <h5 class="card-title mt-lg-3">Best Customer Service</h5>
+                      <p class="review-text ">" This is the best service I have ever used. Highly recommended! "</p>
+                      <h6 class=" mt-lg-4">Customer Name</h6>
+                      <span class="small">Customer From India</span>
+                      <hr class="mt-lg-4">
+                      <div class="row">
+                        <div class="col-lg-3">
+                          <img src="https://pantproject.com/cdn/shop/files/DSC6992.jpg?v=1719209621"
+                            class="rounded mb-3" alt="Profile Pic">
+
+                        </div>
+                        <div class="col-lg-8 testimonial-flex">
+                          <a href="#" class="text-left testimonial-product small">Product Name</a>
+                          <p class="small">$105.5</p>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card testimonial-card">
+                    <div class="card-body testi mx-auto">
+                      <div class="review-stars mt-lg-3">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+
+                      </div>
+
+                      <h5 class="card-title mt-lg-3">Best Customer Service</h5>
+                      <p class="review-text ">" This is the best service I have ever used. Highly recommended! "</p>
+                      <h6 class=" mt-lg-4">Customer Name</h6>
+                      <span class="small">Customer From India</span>
+                      <hr class="mt-lg-4">
+                      <div class="row">
+                        <div class="col-lg-3">
+                          <img src="https://pantproject.com/cdn/shop/files/DSC6992.jpg?v=1719209621"
+                            class="rounded mb-3" alt="Profile Pic">
+
+                        </div>
+                        <div class="col-lg-8 testimonial-flex">
+                          <a href="#" class="text-left testimonial-product small">Product Name</a>
+                          <p class="small">$105.5</p>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card testimonial-card">
+                    <div class="card-body testi mx-auto">
+                      <div class="review-stars mt-lg-3">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+
+                      </div>
+
+                      <h5 class="card-title mt-lg-3">Best Customer Service</h5>
+                      <p class="review-text ">" This is the best service I have ever used. Highly recommended! "</p>
+                      <h6 class=" mt-lg-4">Customer Name</h6>
+                      <span class="small">Customer From India</span>
+                      <hr class="mt-lg-4">
+                      <div class="row">
+                        <div class="col-lg-3">
+                          <img src="https://pantproject.com/cdn/shop/files/DSC6992.jpg?v=1719209621"
+                            class="rounded mb-3" alt="Profile Pic">
+
+                        </div>
+                        <div class="col-lg-8 testimonial-flex">
+                          <a href="#" class="text-left testimonial-product small">Product Name</a>
+                          <p class="small">$105.5</p>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev testimonial-prev" type="button" data-bs-target="#testimonialSlider"
+          data-bs-slide="prev">
+          <!-- <span class="" aria-hidden="true"></span> -->
+          <span class="fas fa-arrow-left"></span>
+        </button>
+        <button class="carousel-control-next testimonial-next" type="button" data-bs-target="#testimonialSlider"
+          data-bs-slide="next">
+          <span class="fas fa-arrow-right"></span>
+
+        </button>
+      </div>
+    </section>
+    <section class="Testimonial-mobile-device d-lg-none pt-5 pb-5">
+      <h1 class="text-center pt-lg-5">Happy Clients</h1>
+      <h6 class="text-center small pb-4">Hear what they say about us </h6>
+      <div id="carouselExampleCaptions2" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="3"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="4"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="5"
+            aria-label="Slide 3"></button>
+
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <div class="card testimonial-card">
+                  <div class="card-body testi mx-auto">
+                    <div class="review-stars mt-lg-3">
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+
+                    </div>
+
+                    <h5 class="card-title mt-lg-3">Best Customer Service</h5>
+                    <p class="review-text ">" This is the best service I have ever used. Highly recommended! "</p>
+                    <h6 class=" mt-lg-4">Customer Name</h6>
+                    <span class="small">Customer From India</span>
+                    <hr class="mt-lg-4">
+                    <div class="row">
+                      <div class="col-lg-4 col-4">
+                        <img src="https://via.placeholder.com/100" class="rounded mb-3" alt="Profile Pic">
+
+                      </div>
+                      <div class="col-lg-8 col-8 testimonial-flex">
+                        <a href="#" class="text-left testimonial-product small">Product Name</a>
+                        <p class="small">$105.5</p>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <div class="card testimonial-card">
+                  <div class="card-body testi mx-auto">
+                    <div class="review-stars mt-lg-3">
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+
+                    </div>
+
+                    <h5 class="card-title mt-lg-3">Best Customer Service</h5>
+                    <p class="review-text ">" This is the best service I have ever used. Highly recommended! "</p>
+                    <h6 class=" mt-lg-4">Customer Name</h6>
+                    <span class="small">Customer From India</span>
+                    <hr class="mt-lg-4">
+                    <div class="row">
+                      <div class="col-lg-4 col-4">
+                        <img src="https://via.placeholder.com/100" class="rounded mb-3" alt="Profile Pic">
+
+                      </div>
+                      <div class="col-lg-8 col-8 testimonial-flex">
+                        <a href="#" class="text-left testimonial-product small">Product Name</a>
+                        <p class="small">$105.5</p>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <div class="card testimonial-card">
+                  <div class="card-body testi mx-auto">
+                    <div class="review-stars mt-lg-3">
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+
+                    </div>
+
+                    <h5 class="card-title mt-lg-3">Best Customer Service</h5>
+                    <p class="review-text ">" This is the best service I have ever used. Highly recommended! "</p>
+                    <h6 class=" mt-lg-4">Customer Name</h6>
+                    <span class="small">Customer From India</span>
+                    <hr class="mt-lg-4">
+                    <div class="row">
+                      <div class="col-lg-4 col-4">
+                        <img src="https://via.placeholder.com/100" class="rounded mb-3" alt="Profile Pic">
+
+                      </div>
+                      <div class="col-lg-8 col-8 testimonial-flex">
+                        <a href="#" class="text-left testimonial-product small">Product Name</a>
+                        <p class="small">$105.5</p>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <div class="card testimonial-card">
+                  <div class="card-body testi mx-auto">
+                    <div class="review-stars mt-lg-3">
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+
+                    </div>
+
+                    <h5 class="card-title mt-lg-3">Best Customer Service</h5>
+                    <p class="review-text ">" This is the best service I have ever used. Highly recommended! "</p>
+                    <h6 class=" mt-lg-4">Customer Name</h6>
+                    <span class="small">Customer From India</span>
+                    <hr class="mt-lg-4">
+                    <div class="row">
+                      <div class="col-lg-4 col-4">
+                        <img src="https://via.placeholder.com/100" class="rounded mb-3" alt="Profile Pic">
+
+                      </div>
+                      <div class="col-lg-8 col-8 testimonial-flex">
+                        <a href="#" class="text-left testimonial-product small">Product Name</a>
+                        <p class="small">$105.5</p>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <div class="card testimonial-card">
+                  <div class="card-body testi mx-auto">
+                    <div class="review-stars mt-lg-3">
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+
+                    </div>
+
+                    <h5 class="card-title mt-lg-3">Best Customer Service</h5>
+                    <p class="review-text ">" This is the best service I have ever used. Highly recommended! "</p>
+                    <h6 class=" mt-lg-4">Customer Name</h6>
+                    <span class="small">Customer From India</span>
+                    <hr class="mt-lg-4">
+                    <div class="row">
+                      <div class="col-lg-4 col-4">
+                        <img src="https://via.placeholder.com/100" class="rounded mb-3" alt="Profile Pic">
+
+                      </div>
+                      <div class="col-lg-8 col-8 testimonial-flex">
+                        <a href="#" class="text-left testimonial-product small">Product Name</a>
+                        <p class="small">$105.5</p>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <div class="card testimonial-card">
+                  <div class="card-body testi mx-auto">
+                    <div class="review-stars mt-lg-3">
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+
+                    </div>
+
+                    <h5 class="card-title mt-lg-3">Best Customer Service</h5>
+                    <p class="review-text ">" This is the best service I have ever used. Highly recommended! "</p>
+                    <h6 class=" mt-lg-4">Customer Name</h6>
+                    <span class="small">Customer From India</span>
+                    <hr class="mt-lg-4">
+                    <div class="row">
+                      <div class="col-lg-4 col-4">
+                        <img src="https://via.placeholder.com/100" class="rounded mb-3" alt="Profile Pic">
+
+                      </div>
+                      <div class="col-lg-8 col-8 testimonial-flex">
+                        <a href="#" class="text-left testimonial-product small">Product Name</a>
+                        <p class="small">$105.5</p>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev testimonial-mobile-prev " type="button"
+          data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
+          <span class="fas fa-arrow-left"
+            style="color: white; font-size: 18px; background-color: black;padding: 8px; border-radius: 50px; margin-left: -20px;"></span>
+
+        </button>
+        <button class="carousel-control-next testimonial-mobile-next" type="button"
+          data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
+          <span class="fas fa-arrow-right"
+            style="color: white; font-size: 18px; background-color: black;padding: 8px; border-radius: 50px; margin-left: 20px;"></span>
+
+        </button>
+      </div>
+    </section>
+
+    <section class="best-selling">
+      <div class="container mt-lg-5 mt-5 ">
+        <h1 class="text-center pb-4">Best Selling Categories</h1>
+        <div class="row mt-lg-5">
+          <div class="col-lg-6 col-sm-6">
+            <a href="#">
+              <div class="best-categories best-categories1"></div>
+            </a>
+          </div>
+          <div class="col-lg-6 col-sm-6">
+            <a href="#">
+              <div class="best-categories best-categories2"></div>
+            </a>
+          </div>
+        </div>
+        <div class="row mt-lg-4">
+          <div class="col-lg-6 col-sm-6">
+            <a href="#">
+              <div class="best-categories best-categories3"></div>
+            </a>
+          </div>
+          <div class="col-lg-6 col-sm-6">
+            <a href="#">
+              <div class="best-categories best-categories4"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-section mt-lg-5 mt-4">
+      <div class="container-fluid blog-fluid">
+        <div class="container pt-lg-5 pt-5 pb-lg-4">
+          <h1 class="text-center">LATEST FROM BLOG</h1>
+          <div class="row mt-lg-5 mt-4">
+            <div class="col-lg-4 col-sm-6">
+              <div class="card pb-lg-3 pb-3" style="width: 100%;">
+                <img src="https://clauem2.arrowtheme.com/media/mgs_blog/katie-azi-LZC1wVJNNGM-unsplash.png"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title blog-title">Lorem ipsum dolor sit amet.</h5>
+                  <p class="card-text blog-text">Some quick example text to build on the card title and make up the bulk
+                    of the card's content.</p>
+                  <h6 class="small blog-date  pb-4">Date: 11-09-2024</h6>
+                  <a href="#" class="blog-read">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="card pb-lg-3 pb-3" style="width: 100%;">
+                <img src="https://clauem2.arrowtheme.com/media/mgs_blog/katie-azi-LZC1wVJNNGM-unsplash.png"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title blog-title">Lorem ipsum dolor sit amet.</h5>
+                  <p class="card-text blog-text">Some quick example text to build on the card title and make up the bulk
+                    of the card's content.</p>
+                  <h6 class="small blog-date pb-lg-4 pb-4">Date: 11-09-2024</h6>
+                  <a href="#" class="blog-read">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="card pb-lg-3 pb-3" style="width: 100%;">
+                <img src="https://clauem2.arrowtheme.com/media/mgs_blog/katie-azi-LZC1wVJNNGM-unsplash.png"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title blog-title">Lorem ipsum dolor sit amet.</h5>
+                  <p class="card-text blog-text">Some quick example text to build on the card title and make up the bulk
+                    of the card's content.</p>
+                  <h6 class="small blog-date pb-lg-4 pb-4">Date: 11-09-2024</h6>
+                  <a href="#" class="blog-read">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story ">
+      <div class="container-fluid ">
+        <div class="row">
+          <div class="col-lg-6 col-sm-6 mt-5">
+            <div class="offline">
+              <h2>We Are Offline</h2>
+              <p>See All Stores <i class="fas fa-chevron-right"></i></p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-6 mt-5">
+            <div class="about-story">
+              <h2>About Us</h2>
+              <p>Read Our Story <i class="fas fa-chevron-right"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="shiping-section mt-lg-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="shipping-home pb-lg-4 mt-3">
+              <i class="fas fa-cube mt-lg-1"></i>
+              <h5 class="mt-lg-3">Free Shipping</h5>
+              <p class="small mt-lg-3">Free shipping over order $120</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="shipping-home pb-lg-4 mt-3">
+              <i class="fas fa-money-bill mt-lg-1"></i>
+              <h5 class="mt-lg-3">Flexible Payment</h5>
+              <p class="small mt-lg-3">Pay with Multiple Credit Cards</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="shipping-home pb-lg-4 mt-3">
+              <i class="fas fa-undo mt-lg-1"></i>
+              <h5 class="mt-lg-3">14 Day Returns</h5>
+              <p class="small mt-lg-3">Within 30 days for an exchange</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="shipping-home pb-lg-4 mt-3">
+              <i class="fas fa-headset mt-lg-1"></i>
+              <h5 class="mt-lg-3">Premium Support</h5>
+              <p class="small mt-lg-3">Outstanding premium support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer-section">
+    <div class="container-fluid pb-lg-3">
+      <hr>
+
+      <div class="row pb-lg-3">
+        <div class="col-lg-3 col-sm-12">
+          <a href="#" class="foot-logo">My Logo</a>
+          <address class="foot-address">Address: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, tempora! </address>
+          <h6 class="foot-email-number">Email: <a href="mailto:demo@gmail.com">demo@gmail.com</a> </h6>
+          <h6 class="foot-email-number">Phone: <a href="tel:+1234567890">1234567890</a></h6>
+          <a href="#" class="foot-direction">Get Direction <i class="fas fa-arrow-right"></i></a>
+          <div class="foot-icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+
+          </div>
+        </div>
+        <div class="col-lg-1 col-sm-1"></div>
+        <div class="col-lg-2 col-sm-5 col-7 foot-help mt-lg-0 mt-5">
+          <h4>Help</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#"> Returns + Exchanges</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#"> FAQ’s </a></li>
+            <li><a href="#"> Compare </a></li>
+            <li><a href="#"> My Wishlist</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6 col-sm-5 foot-help mt-lg-0 mt-5">
+<h4>Pages</h4>
+<ul class="list-unstyled">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Product</a></li>
+  <li><a href="#">Blog</a></li>
+  <li><a href="#">Contact</a></li>
+
+</ul>
+        </div>
+        <div class="col-lg-3 foot-sign-email">
+          <h3>Sign Up for Email</h3>
+          <p>Sign up to get first dibs on new arrivals, sales, exclusive content, events and more!</p>
+          <div class="input-group foot-subscribe">
+            <input type="email" placeholder="Enter Your Email..">
+            <button type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="foot-copy-right">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6">
+<p>© 2024 Ecomus Store. All Rights Reserved</p>
+          </div>
+          <div class="col-lg-5 col-sm-1"></div>
+          <div class="col-lg-3 col-sm-5 d-flex align-items-center justify-content-center" >
+            <img src="https://themesflat.co/html/ecomus/images/payments/visa.png" alt="">
+            <img src="https://themesflat.co/html/ecomus/images/payments/img-1.png" alt="">
+            <img src="https://themesflat.co/html/ecomus/images/payments/img-2.png" alt="">
+            <img src="https://themesflat.co/html/ecomus/images/payments/img-3.png" alt="">
+            <img src="https://themesflat.co/html/ecomus/images/payments/img-4.png" alt="">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script> -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+  <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+  <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+    ></script> -->
+
+  <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+
+<script src="script.js"></script>
+
+  <!-- <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("overlay").style.display = "block"; // Show overlay
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("overlay").style.display = "none"; // Hide overlay
+        }
+        </script> -->
+</body>
+
+</html>

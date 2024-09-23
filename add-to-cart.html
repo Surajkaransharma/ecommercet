@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product-details</title>
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  
+    <header>
+        <section class="topbar-section">
+          <div class="container-fluid topbar pb-lg-0 pt-lg-2 pt-2 pb-2 pb-sm-0" style="overflow: hidden; padding: 0;">
+            <div class="container">
+              <div class="row ">
+                <div class="col-lg-4 col-sm-6 col-12 top-cont d-flex justify-content-cener align-items-center">
+                  <ul class="list-unstyled list-inline mx-auto">
+                    <li class="list-inline-item top-phone"><a href="tel:+1234567890"><i class="fas fa-phone"></i><span>
+                          +1234567890</span></a></li>
+                    <li class="list-inline-item">
+                      <a href="mailto:demo1234@gmail.com"><i class="fas fa-envelope"></i><span>
+                          demo1234@gmail.com</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-5 col-sm-4 col-12 d-flex justify-content-center    top-sale">
+                  <!-- <a href="">zxcfghjkl</a> -->
+                  <span>sale discount off 50%!<a href="#">Shop Now</a></span>
+                </div>
+                <div class="col-lg-2 col-sm-2 d-flex justify-content-center  top-social mt-sm-0 mt-2">
+    
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="navbar-section">
+          <div class="container-fluid" style="overflow: hidden; padding: 0;">
+            <div class="side-navbar-start" style="z-index: 1; position: relative;">
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Products</a>
+              <a href="#">Blog</a>
+              <a href="#">Contact</a>
+            </div>
+            <div id="overlay" onclick="closeNav()"></div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-1 col-sm-1 side-nav col-1">
+                  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    
+                </div>
+                <div class="col-lg-3 col-sm-1 col-1"></div>
+                <div class="col-lg-4 col-sm-6 col-6 navbar-logo">
+                  My Logo
+                </div>
+                <div class="col-lg-1 col-sm-1 col-1"></div>
+    
+                <div class="col-lg-3 col-sm-2 col-2 navbar-icons">
+                  <a href="#">
+                    <span class="search-icon" onclick="openSearch()">
+                      <i class="fas fa-search" aria-hidden="true"></i>
+                    </span>
+                  </a>
+                  <a href="#">
+                    <i class="far fa-user-circle"  data-bs-toggle="modal" data-bs-target="#userModal" ></i>
+                  </a>
+        <!-- Modal -->
+        <div class="modal fade userModal" id="userModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Login / Register</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Register</button>
+                  </li>
+                </ul>
+      
+                <!-- Tab content -->
+                <div class="tab-content mt-3" id="myTabContent">
+                  <!-- Login Form -->
+                  <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                    <form>
+                      <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="loginEmail" placeholder="Enter email">
+                      </div>
+                      <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                      </div>
+                      <button type="submit" class="btn  w-100 tab-login-btn">Login</button>
+                    </form>
+                  </div>
+      
+                  <!-- Register Form -->
+                  <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                    <form>
+                      <div class="mb-3">
+                        <label for="registerEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="registerEmail" placeholder="Enter email">
+                      </div>
+                      <div class="mb-3">
+                        <label for="registerPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="registerPassword" placeholder="Password">
+                      </div>
+                      <div class="mb-3">
+                        <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Confirm password">
+                      </div>
+                      <button type="submit" class="btn  w-100 tab-reg-btn">Register</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                  
+                  <a href="#">
+                    <i class="fas fa-shopping-bag"></i>
+                  </a>
+    
+                </div>
+              </div>
+              <!-- Fullscreen Search searchbar -->
+    
+              <div id="mysearchbar" class="searchbar">
+                <span class="closebtn" onclick="closeSearch()">&times;</span>
+                <input type="text" placeholder="Search... ">
+                <!-- Search Icon -->
+              </div>
+    
+            </div>
+          </div>
+        </section>
+      </header>
+
+
+      <main>
+        <section>
+          <div class="container-fluid product-detail-banner d-flex align-items-end">
+            <nav class="breadcrumb  pt-lg-3">
+              <a class="breadcrumb-item" href="index.html">Home</a>
+              <span class="breadcrumb-item active">Add to Cart</span>
+            </nav>
+          </div>
+        </section>
+
+        <section class="cart-section mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 add-cart-page shadow-sm pb-4 m-3">
+                        <div class="row add-cart shadow-sm mt-2 pt-2">
+                            <div class="col-lg-4">
+                                <h6 class="small btn"> From Saved Address</h6>
+                            </div>
+                            <div class="col-lg-4"></div>
+                            <div class="col-lg-4">
+                                <!-- Button to Open the Modal -->
+<a href="#" data-bs-toggle="modal" data-bs-target="#pincodeModal" class="btn">
+    Enter Delivery Pincode
+  </a>
+  
+  <!-- The Modal -->
+  <div class="modal fade" id="pincodeModal" tabindex="-1" aria-labelledby="pincodeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pincodeModalLabel">Enter Delivery Pincode</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="pincodeInput" class="form-label">Pincode</label>
+              <input type="text" class="form-control" id="pincodeInput" placeholder="Enter your pincode">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Check</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+                            </div>
+
+                        </div>
+                        <div class="row mt-4 pt-2 pb-2 border">
+                          <div class="col-lg-2 col-sm-2 add-to-cart-img">
+                            <img src="https://rukminim2.flixcart.com/image/224/224/xif0q/trouser/f/z/q/34-01-rrfashion-original-imahyyyxyxqawhnm.jpeg?q=90" alt="" class="mx-auto d-block">
+                            <div class="counter-container mt-4">
+                              <button class="counter-button" id="decrementBtn">-</button>
+                              <span class="counter-value" id="counterValue">0</span>
+                              <button class="counter-button" id="incrementBtn">+</button>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-sm-6 add-to-cart-detail">
+<h5> INDICLUB Relaxed Men Light Grey Trousers</h5>
+<h6 class="small cart-pent-size">Size: 32</h6>
+<h6 class="small cart-pent-size">Seller:RRTEXTILE4926</h6>
+<h6><s class="mrp">₹1,999</s> <b>₹499</b></h6>
+<a href="#" class="save-later">SAVE FOR LATER</a>
+<a href="#" class="remove-cart-item">REMOVE</a>
+                          </div>
+                          <div class="col-lg-4 col-sm-4">
+                            <p>Delivery by Fri Sep 27 | ₹40Free</p>
+                          </div>
+                        </div>
+                        <div class="row mt-4 pt-2 pb-2 border">
+                          <div class="col-lg-2 col-sm-2 add-to-cart-img">
+                            <img src="https://rukminim2.flixcart.com/image/224/224/xif0q/trouser/f/z/q/34-01-rrfashion-original-imahyyyxyxqawhnm.jpeg?q=90" alt="" class="mx-auto d-block">
+                            <div class="counter-container mt-4">
+                              <button class="counter-button" id="decrementBtn">-</button>
+                              <span class="counter-value" id="counterValue">0</span>
+                              <button class="counter-button" id="incrementBtn">+</button>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-sm-6 add-to-cart-detail">
+<h5> INDICLUB Relaxed Men Light Grey Trousers</h5>
+<h6 class="small cart-pent-size">Size: 32</h6>
+<h6 class="small cart-pent-size">Seller:RRTEXTILE4926</h6>
+<h6><s class="mrp">₹1,999</s> <b>₹499</b></h6>
+<a href="#" class="save-later">SAVE FOR LATER</a>
+<a href="#" class="remove-cart-item">REMOVE</a>
+                          </div>
+                          <div class="col-lg-4 col-sm-4">
+                            <p>Delivery by Fri Sep 27 | ₹40Free</p>
+                          </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 p-0 m-3">
+                      <div class="cart-price-detail shadow-sm pb-2">
+<div class="btn shadow-sm w-100"><h6>PRICE DETAILS</h6></div>
+<table class="table table-borderless pricess">
+
+  <tbody>
+    <tr>
+      <td>Price (1 item)</td>
+      <td>₹1,998</td>
+    </tr>
+    <tr>
+      <td>Discount</td>
+      <td class="text-success">− ₹1,420</td>
+    </tr>
+    <tr>
+      <td>Delivery Charges</td>
+      <td><s>₹80</s><span class="text-success">Free</span></td>
+
+    </tr>
+<tr>
+  <td colspan="2"><hr></td>
+</tr>
+<tr>
+  <th>Total Amount</th>
+  <th>₹578</th>
+</tr>
+  </tbody>
+</table>
+<hr class="m-2 mt-4">
+<h6 class="this-order">You will save ₹1,420 on this order</h6>
+<i class="fas fa-shield-check"></i>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-lg-2">
+                        <img src="img/shield.png" alt="" width="100%">
+                      </div>
+                      <div class="col-lg-10">
+                      <span>Safe and Secure Payments.Easy returns.100% Authentic products.</span>
+
+                      </div>
+                    </div>
+                    <div class="row mt-2">
+                      <a href="checkout.html" class="btn btn-dark">Proceed to Checkout</a>
+                    </div>
+                </div>
+            </div></div>
+
+
+        </section>
+    </main>
+
+
+      
+
+
+
+
+    <footer class="footer-section">
+      <div class="container-fluid pb-lg-3">
+        <hr>
+  
+        <div class="row pb-lg-3">
+          <div class="col-lg-3 col-sm-12">
+            <a href="#" class="foot-logo">My Logo</a>
+            <address class="foot-address">Address: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, tempora! </address>
+            <h6 class="foot-email-number">Email: <a href="mailto:demo@gmail.com">demo@gmail.com</a> </h6>
+            <h6 class="foot-email-number">Phone: <a href="tel:+1234567890">1234567890</a></h6>
+            <a href="#" class="foot-direction">Get Direction <i class="fas fa-arrow-right"></i></a>
+            <div class="foot-icon">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i>
+  
+            </div>
+          </div>
+          <div class="col-lg-1 col-sm-1"></div>
+          <div class="col-lg-2 col-sm-5 col-7 foot-help mt-lg-0 mt-5">
+            <h4>Help</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#"> Returns + Exchanges</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#"> FAQ’s </a></li>
+              <li><a href="#"> Compare </a></li>
+              <li><a href="#"> My Wishlist</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-6 col-sm-5 foot-help mt-lg-0 mt-5">
+  <h4>Pages</h4>
+  <ul class="list-unstyled">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Product</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact</a></li>
+  
+  </ul>
+          </div>
+          <div class="col-lg-3 foot-sign-email">
+            <h3>Sign Up for Email</h3>
+            <p>Sign up to get first dibs on new arrivals, sales, exclusive content, events and more!</p>
+            <div class="input-group foot-subscribe">
+              <input type="email" placeholder="Enter Your Email..">
+              <button type="button">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="foot-copy-right">
+          <div class="row">
+            <div class="col-lg-4 col-sm-6">
+  <p>© 2024 Ecomus Store. All Rights Reserved</p>
+            </div>
+            <div class="col-lg-5 col-sm-1"></div>
+            <div class="col-lg-3 col-sm-5 d-flex align-items-center justify-content-center" >
+              <img src="https://themesflat.co/html/ecomus/images/payments/visa.png" alt="">
+              <img src="https://themesflat.co/html/ecomus/images/payments/img-1.png" alt="">
+              <img src="https://themesflat.co/html/ecomus/images/payments/img-2.png" alt="">
+              <img src="https://themesflat.co/html/ecomus/images/payments/img-3.png" alt="">
+              <img src="https://themesflat.co/html/ecomus/images/payments/img-4.png" alt="">
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+ <script src="script.js"></script>
+<script>
+  
+
+/////////////////////////counter increament
+
+
+
+
+let count = 1;
+
+// Getting elements
+const counterValue = document.getElementById('counterValue');
+const incrementBtn = document.getElementById('incrementBtn');
+const decrementBtn = document.getElementById('decrementBtn');
+
+// Update counter display
+function updateCounter() {
+counterValue.textContent = count;
+decrementBtn.disabled = count === 1; // Disable the decrement button if count is 0
+}
+
+// Increment the counter
+incrementBtn.addEventListener('click', () => {
+count++;
+updateCounter();
+});
+
+// Decrement the counter
+decrementBtn.addEventListener('click', () => {
+if (count > 0) {
+count--;
+updateCounter();
+}
+});
+
+// Initialize the counter on page load
+updateCounter();
+
+</script>  
+
+
+
+
+      <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+  <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+  <!-- <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+  ></script> -->
+
+  <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+</body>
+
+</html>

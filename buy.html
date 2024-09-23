@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product-details</title>
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  
+    <header>
+        <section class="topbar-section">
+          <div class="container-fluid topbar pb-lg-0 pt-lg-2 pt-2 pb-2 pb-sm-0" style="overflow: hidden; padding: 0;">
+            <div class="container">
+              <div class="row ">
+                <div class="col-lg-4 col-sm-6 col-12 top-cont d-flex justify-content-cener align-items-center">
+                  <ul class="list-unstyled list-inline mx-auto">
+                    <li class="list-inline-item top-phone"><a href="tel:+1234567890"><i class="fas fa-phone"></i><span>
+                          +1234567890</span></a></li>
+                    <li class="list-inline-item">
+                      <a href="mailto:demo1234@gmail.com"><i class="fas fa-envelope"></i><span>
+                          demo1234@gmail.com</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-5 col-sm-4 col-12 d-flex justify-content-center    top-sale">
+                  <!-- <a href="">zxcfghjkl</a> -->
+                  <span>sale discount off 50%!<a href="#">Shop Now</a></span>
+                </div>
+                <div class="col-lg-2 col-sm-2 d-flex justify-content-center  top-social mt-sm-0 mt-2">
+    
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="navbar-section">
+          <div class="container-fluid" style="overflow: hidden; padding: 0;">
+            <div class="side-navbar-start" style="z-index: 1; position: relative;">
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Products</a>
+              <a href="#">Blog</a>
+              <a href="#">Contact</a>
+            </div>
+            <div id="overlay" onclick="closeNav()"></div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-1 col-sm-1 side-nav col-1">
+                  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    
+                </div>
+                <div class="col-lg-3 col-sm-1 col-1"></div>
+                <div class="col-lg-4 col-sm-6 col-6 navbar-logo">
+                  My Logo
+                </div>
+                <div class="col-lg-1 col-sm-1 col-1"></div>
+    
+                <div class="col-lg-3 col-sm-2 col-2 navbar-icons">
+                  <a href="#">
+                    <span class="search-icon" onclick="openSearch()">
+                      <i class="fas fa-search" aria-hidden="true"></i>
+                    </span>
+                  </a>
+                  <a href="#">
+                    <i class="far fa-user-circle"  data-bs-toggle="modal" data-bs-target="#userModal" ></i>
+                  </a>
+        <!-- Modal -->
+        <div class="modal fade userModal" id="userModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Login / Register</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Register</button>
+                  </li>
+                </ul>
+      
+                <!-- Tab content -->
+                <div class="tab-content mt-3" id="myTabContent">
+                  <!-- Login Form -->
+                  <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                    <form>
+                      <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="loginEmail" placeholder="Enter email">
+                      </div>
+                      <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                      </div>
+                      <button type="submit" class="btn  w-100 tab-login-btn">Login</button>
+                    </form>
+                  </div>
+      
+                  <!-- Register Form -->
+                  <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                    <form>
+                      <div class="mb-3">
+                        <label for="registerEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="registerEmail" placeholder="Enter email">
+                      </div>
+                      <div class="mb-3">
+                        <label for="registerPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="registerPassword" placeholder="Password">
+                      </div>
+                      <div class="mb-3">
+                        <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Confirm password">
+                      </div>
+                      <button type="submit" class="btn  w-100 tab-reg-btn">Register</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                  
+                  <a href="#">
+                    <i class="fas fa-shopping-bag"></i>
+                  </a>
+    
+                </div>
+              </div>
+              <!-- Fullscreen Search searchbar -->
+    
+              <div id="mysearchbar" class="searchbar">
+                <span class="closebtn" onclick="closeSearch()">&times;</span>
+                <input type="text" placeholder="Search... ">
+                <!-- Search Icon -->
+              </div>
+    
+            </div>
+          </div>
+        </section>
+      </header>
+
+
+      <main>
+        <section>
+          <div class="container-fluid product-detail-banner d-flex align-items-end">
+            <nav class="breadcrumb  pt-lg-3">
+              <a class="breadcrumb-item" href="index.html">Home</a>
+              <span class="breadcrumb-item active">Checkout</span>
+            </nav>
+          </div>
+        </section>
+
+     <section class="checkout">
+        <div class="container mt-5">
+            <h2 class="mb-4">Checkout</h2>
+            <div class="row">
+              <!-- Billing Details -->
+              <div class="col-md-7  shadow-sm m-3 pt-3">
+                <form class="checkout-form">
+                  <h4>Billing Details</h4>
+        
+                  <!-- Full Name -->
+                  <div class="mb-3">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                  </div>
+        
+                  <!-- Email -->
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                  </div>
+        
+                  <!-- Address -->
+                  <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="Enter your address" required>
+                  </div>
+        
+                  <!-- City and Postal Code -->
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="city" class="form-label">City</label>
+                      <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="postalCode" class="form-label">Postal Code</label>
+                      <input type="text" class="form-control" id="postalCode" placeholder="Enter your postal code" required>
+                    </div>
+                  </div>
+        
+                  <!-- Payment Method -->
+                  <h4 class="mt-4">Payment Method</h4>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" value="creditCard" checked>
+                    <label class="form-check-label" for="creditCard">
+                      Credit Card
+                    </label>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="paypal" value="paypal">
+                    <label class="form-check-label" for="paypal">
+                      PayPal
+                    </label>
+                  </div>
+        
+                  <!-- Card Details -->
+                  <div id="cardDetails" class="mt-3">
+                    <label for="cardNumber" class="form-label">Card Number</label>
+                    <input type="text" class="form-control mb-3" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+        
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="expiryDate" class="form-label">Expiry Date</label>
+                        <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="cvv" class="form-label">CVV</label>
+                        <input type="text" class="form-control" id="cvv" placeholder="123" required>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+        <!-- <div class="col-lg-1"></div> -->
+              <!-- Order Summary -->
+              <div class="col-md-4 shadow-sm m-3 pt-3">
+                <div class="order-summary">
+                  <h4>Order Summary</h4>
+                  <hr>
+                  <div class="d-flex justify-content-between">
+                    <p>Product Name 1</p>
+                    <p>$20</p>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p>Product Name 2</p>
+                    <p>$15</p>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <h5>Subtotal</h5>
+                    <h5>$35</h5>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="text-muted">Shipping</p>
+                    <p class="text-muted">$5</p>
+                  </div>
+                  <hr>
+                  <div class="d-flex justify-content-between">
+                    <h5>Total</h5>
+                    <h5>$40</h5>
+                  </div>
+                  <button class="btn place-order btn-submit mt-4">Place Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+     </section>
+
+
+
+
+    </main>
+
+
+      
+
+
+
+
+    <footer class="footer-section">
+      <div class="container-fluid pb-lg-3">
+        <hr>
+  
+        <div class="row pb-lg-3">
+          <div class="col-lg-3 col-sm-12">
+            <a href="#" class="foot-logo">My Logo</a>
+            <address class="foot-address">Address: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, tempora! </address>
+            <h6 class="foot-email-number">Email: <a href="mailto:demo@gmail.com">demo@gmail.com</a> </h6>
+            <h6 class="foot-email-number">Phone: <a href="tel:+1234567890">1234567890</a></h6>
+            <a href="#" class="foot-direction">Get Direction <i class="fas fa-arrow-right"></i></a>
+            <div class="foot-icon">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i>
+  
+            </div>
+          </div>
+          <div class="col-lg-1 col-sm-1"></div>
+          <div class="col-lg-2 col-sm-5 col-7 foot-help mt-lg-0 mt-5">
+            <h4>Help</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#"> Returns + Exchanges</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#"> FAQ’s </a></li>
+              <li><a href="#"> Compare </a></li>
+              <li><a href="#"> My Wishlist</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-6 col-sm-5 foot-help mt-lg-0 mt-5">
+  <h4>Pages</h4>
+  <ul class="list-unstyled">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Product</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact</a></li>
+  
+  </ul>
+          </div>
+          <div class="col-lg-3 foot-sign-email">
+            <h3>Sign Up for Email</h3>
+            <p>Sign up to get first dibs on new arrivals, sales, exclusive content, events and more!</p>
+            <div class="input-group foot-subscribe">
+              <input type="email" placeholder="Enter Your Email..">
+              <button type="button">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="foot-copy-right">
+          <div class="row">
+            <div class="col-lg-4 col-sm-6">
+  <p>© 2024 Ecomus Store. All Rights Reserved</p>
+            </div>
+            <div class="col-lg-5 col-sm-1"></div>
+            <div class="col-lg-3 col-sm-5 d-flex align-items-center justify-content-center" >
+              <img src="https://themesflat.co/html/ecomus/images/payments/visa.png" alt="">
+              <img src="https://themesflat.co/html/ecomus/images/payments/img-1.png" alt="">
+              <img src="https://themesflat.co/html/ecomus/images/payments/img-2.png" alt="">
+              <img src="https://themesflat.co/html/ecomus/images/payments/img-3.png" alt="">
+              <img src="https://themesflat.co/html/ecomus/images/payments/img-4.png" alt="">
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+ <script src="script.js"></script>
+
+
+
+
+
+      <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+  <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+  <!-- <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+  ></script> -->
+
+  <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+</body>
+
+</html>

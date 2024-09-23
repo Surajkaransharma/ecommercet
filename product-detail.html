@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product-details</title>
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  
+    <header>
+        <section class="topbar-section">
+          <div class="container-fluid topbar pb-lg-0 pt-lg-2 pt-2 pb-2 pb-sm-0" style="overflow: hidden; padding: 0;">
+            <div class="container">
+              <div class="row ">
+                <div class="col-lg-4 col-sm-6 col-12 top-cont d-flex justify-content-cener align-items-center">
+                  <ul class="list-unstyled list-inline mx-auto">
+                    <li class="list-inline-item top-phone"><a href="tel:+1234567890"><i class="fas fa-phone"></i><span>
+                          +1234567890</span></a></li>
+                    <li class="list-inline-item">
+                      <a href="mailto:demo1234@gmail.com"><i class="fas fa-envelope"></i><span>
+                          demo1234@gmail.com</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-5 col-sm-4 col-12 d-flex justify-content-center    top-sale">
+                  <!-- <a href="">zxcfghjkl</a> -->
+                  <span>sale discount off 50%!<a href="#">Shop Now</a></span>
+                </div>
+                <div class="col-lg-2 col-sm-2 d-flex justify-content-center  top-social mt-sm-0 mt-2">
+    
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="navbar-section">
+          <div class="container-fluid" style="overflow: hidden; padding: 0;">
+            <div class="side-navbar-start" style="z-index: 1; position: relative;">
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Products</a>
+              <a href="#">Blog</a>
+              <a href="#">Contact</a>
+            </div>
+            <div id="overlay" onclick="closeNav()"></div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-1 col-sm-1 side-nav col-1">
+                  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    
+                </div>
+                <div class="col-lg-3 col-sm-1 col-1"></div>
+                <div class="col-lg-4 col-sm-6 col-6 navbar-logo">
+                  My Logo
+                </div>
+                <div class="col-lg-1 col-sm-1 col-1"></div>
+    
+                <div class="col-lg-3 col-sm-2 col-2 navbar-icons">
+                  <a href="#">
+                    <span class="search-icon" onclick="openSearch()">
+                      <i class="fas fa-search" aria-hidden="true"></i>
+                    </span>
+                  </a>
+                  <a href="#">
+                    <i class="far fa-user-circle"  data-bs-toggle="modal" data-bs-target="#userModal" ></i>
+                  </a>
+        <!-- Modal -->
+        <div class="modal fade userModal" id="userModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Login / Register</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Register</button>
+                  </li>
+                </ul>
+      
+                <!-- Tab content -->
+                <div class="tab-content mt-3" id="myTabContent">
+                  <!-- Login Form -->
+                  <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                    <form>
+                      <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="loginEmail" placeholder="Enter email">
+                      </div>
+                      <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                      </div>
+                      <button type="submit" class="btn  w-100 tab-login-btn">Login</button>
+                    </form>
+                  </div>
+      
+                  <!-- Register Form -->
+                  <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                    <form>
+                      <div class="mb-3">
+                        <label for="registerEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="registerEmail" placeholder="Enter email">
+                      </div>
+                      <div class="mb-3">
+                        <label for="registerPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="registerPassword" placeholder="Password">
+                      </div>
+                      <div class="mb-3">
+                        <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Confirm password">
+                      </div>
+                      <button type="submit" class="btn  w-100 tab-reg-btn">Register</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                  
+                  <a href="#">
+                    <i class="fas fa-shopping-bag"></i>
+                  </a>
+    
+                </div>
+              </div>
+              <!-- Fullscreen Search searchbar -->
+    
+              <div id="mysearchbar" class="searchbar">
+                <span class="closebtn" onclick="closeSearch()">&times;</span>
+                <input type="text" placeholder="Search... ">
+                <!-- Search Icon -->
+              </div>
+    
+            </div>
+          </div>
+        </section>
+      </header>
+
+
+      <main>
+        <section>
+          <div class="container-fluid product-detail-banner d-flex align-items-end">
+            <nav class="breadcrumb  pt-lg-3">
+              <a class="breadcrumb-item" href="index.html">Home</a>
+              <span class="breadcrumb-item active">Product Details</span>
+            </nav>
+          </div>
+        </section>
+        <section>
+          <div class="container-fluid">
+            <div class="show-products-fullscreen">
+                <img src="" alt="Zoomed Image">
+                <div class="show-products-control">
+                    <button class="show-products-control-button prev"><i class="fas fa-arrow-left"></i></button>
+                    <button class="show-products-control-button next"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mt-lg-5 mt-3">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 show-products">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-6">
+                            <img src="https://pantproject.com/cdn/shop/files/DSC5041.jpg?v=1725446660" alt="Image 1" width="100%">
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-6">
+                            <img src="https://pantproject.com/cdn/shop/files/DSC5041.jpg?v=1725446660" alt="Image 2" width="100%">
+                        </div>
+                    </div>
+                    <div class="row mt-lg-3 mt-3">
+                        <div class="col-lg-6 col-sm-6 col-6">
+                            <img src="https://pantproject.com/cdn/shop/files/DSC5058.jpg?v=1725446660" alt="Image 3" width="100%">
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-6">
+                            <img src="https://pantproject.com/cdn/shop/files/DSC5000.jpg?v=1725446660" alt="Image 4" width="100%">
+                        </div>
+                    </div>
+        </div>
+                <div class="col-lg-6 col-sm-6 product-details">
+        <h1>Ebony Black Stretch Pants</h1>
+        <h3 class="text-secondary">$99.00</h3>
+        <p class="text-justify">Crafted using a premium blend of 62% Polyester, 34% Viscose & 4% Elastane with four-way stretch comfort to take you from day to night whether it's working day or bar night. Our model in the images wears a Slim Fit.</p>
+              <div class="row count-product pt-lg-3">
+                <div class="col-lg-4 col-sm-5 col-5">
+                  <div class="counter-container">
+                    <button class="counter-button" id="decrementBtn">-</button>
+                    <span class="counter-value" id="counterValue">0</span>
+                    <button class="counter-button" id="incrementBtn">+</button>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-5 col-5 product-add-cart">
+                <a href="#" class="add-to-cart btn mt-lg-1">ADD TO CART</a>
+                </div>
+                <div class="col-lg-4 col-sm-5 col-6 product-add-cart mt-lg-0 mt-3">
+                  <a href="#" class="add-to-cart btn mt-lg-1">Buy Now</a>
+                  </div>
+              </div>
+        
+        <div class="row mt-lg-4 mt-3">
+          <div class="col-lg-8">
+              <div class="free-shiping d-flex  align-items-center pt-lg-3 pb-lg-3">
+                <i class="fas fa-truck text-dark"></i>&nbsp;<span class="text-dark">Free Shipping 10-12 Days Delivery</span></i>
+              </div>
+        </div></div>
+        <div class="row size-chart mt-lg-4 mt-5">
+          <div class="col-lg-12">
+        <h6 class="#">Size <a href="#" class="size">30</a> <a href="#" class="size">32</a> <a href="#" class="size">34</a> <a href="#" class="size">36</a> <a href="#" class="size-scale" data-bs-toggle="modal" data-bs-target="#exampleModal">Size Chart <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSIxMiI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMyODc0RjAiIHN0cm9rZS13aWR0aD0iMS4zIj48cGF0aCBmaWxsPSIjRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iIGQ9Ik0zNy4zNS42NUguNjV2MTAuN2gzNi43Vi42NXoiLz48cGF0aCBmaWxsPSIjODc4Nzg3IiBkPSJNNi42NSA4LjY1aDF2Mi43aC0xem00LTNIMTFsLS4zNS0uMzVWNWwtLjE1LjE1LS4xNS0uMTV2LjNsLS4zNS4zNWguMzV2NS43SDEwbC4zNS4zNXYuM2wuMTUtLjE1LjE1LjE1di0uM2wuMzUtLjM1aC0uMzV2LTUuN3ptNSAzSDE2bC0uMzUtLjM1VjhsLS4xNS4xNS0uMTUtLjE1di4zbC0uMzUuMzVoLjM1djIuN0gxNWwuMzUuMzV2LjNsLjE1LS4xNS4xNS4xNXYtLjNsLjM1LS4zNWgtLjM1di0yLjd6bTQtM2gxdjUuN2gtMXptNCAzaDF2Mi43aC0xem05IDBoMXYyLjdoLTF6bS00LTNoMXY1LjdoLTF6Ii8+PC9nPjwvc3ZnPg==" alt=""></a></h6>
+          </div>
+        </div>
+        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-xl"> <!-- Changed class to modal-xl for extra width -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Size Chart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <table class="table table-responsive">
+                      <thead class="table-secondary text-center">
+                        <tr>
+                          <th scope="col">Size</th>
+                          <th scope="col">Waist</th>
+                          <th scope="col">Brand Size</th>
+                          <th scope="col">Inseam Length</th>
+                          <th scope="col">Length</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-center">
+                        <tr>
+                          <td scope="row">30</td>
+                          <td>30</td>
+                          <td>30</td>
+                          <td>29</td>
+                          <td>40</td>
+                        </tr>
+                        <tr>
+                          <td scope="row">32</td>
+                          <td>32</td>
+                          <td>32</td>
+                          <td>29</td>
+                          <td>40</td>
+                        </tr>
+                        <tr>
+                          <td scope="row">34</td>
+                          <td>34</td>
+                          <td>34</td>
+                          <td>30</td>
+                          <td>40</td>
+                        </tr>
+                        <tr>
+                          <td scope="row">36</td>
+                          <td>36</td>
+                          <td>36</td>
+                          <td>30</td>
+                          <td>40</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-lg-6">
+                    <ul class="list-unstyled">
+                      <li><b>Waist:</b> Measure around the body at the natural waistline (where you wear your belt).</li>
+                      <li><b>Length:</b>Measure from the top of the waistband through the bottom hem of the garments.</li>
+                      <li><b>Inseam Length:</b>Measure from the crotch to the inside bottom of the leg.</li>
+                      <li><b>Rise:</b>Measure from the crotch to the top of the waistband.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        <div class="row">
+          <div class="col-lg-11 mt-lg-4 mt-4 pt-3 pb-3 pt-lg-3 pb-lg-3 guarantee">
+            <div class="row">
+              <div class="col-lg-4 col-sm-4 col-4">
+                <img src="https://cdn.shopify.com/s/files/1/0423/3576/4634/files/Layer_2.svg?v=1725363370" alt="" class="mx-auto d-block">
+                <h5 class="text-center">Custom Made</h5>
+                <h6 class="small text-center ">Made To Your Fit</h6>
+              </div>
+              <div class="col-lg-4 col-sm-4 col-4">
+                <img src="https://cdn.shopify.com/s/files/1/0423/3576/4634/files/Frame_5190.svg?v=1725363370" alt="" class="mx-auto d-block">
+                <h5 class="text-center">Fit Guarantee</h5>
+                <h6 class="small text-center ">93% + Fit Accuracy</h6>
+              </div>
+              <div class="col-lg-4 col-sm-4 col-4">
+                <img src="https://cdn.shopify.com/s/files/1/0423/3576/4634/files/Layer_3.svg?v=1725363370" alt="" class="mx-auto d-block">
+                <h5 class="text-center">Free Alterations</h5>
+                <h6 class="small text-center ">Within 10 days</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-lg-3">
+          <div class="col-lg-5">
+            <span><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZWxsaXBzZSBjeD0iOSIgY3k9IjE0LjQ3OCIgZmlsbD0iI0ZGRTExQiIgcng9IjkiIHJ5PSIzLjUyMiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGQ9Ik04LjYwOSA3LjAxYy0xLjA4IDAtMS45NTctLjgyNi0xLjk1Ny0xLjg0NSAwLS40ODkuMjA2LS45NTguNTczLTEuMzA0YTIuMDIgMi4wMiAwIDAgMSAxLjM4NC0uNTRjMS4wOCAwIDEuOTU2LjgyNSAxLjk1NiAxLjg0NCAwIC40OS0uMjA2Ljk1OS0uNTczIDEuMzA1cy0uODY0LjU0LTEuMzgzLjU0ek0zLjEzIDUuMTY1YzAgMy44NzQgNS40NzkgOC45MjIgNS40NzkgOC45MjJzNS40NzgtNS4wNDggNS40NzgtOC45MjJDMTQuMDg3IDIuMzEzIDExLjYzNCAwIDguNjA5IDAgNS41ODMgMCAzLjEzIDIuMzEzIDMuMTMgNS4xNjV6Ii8+PC9nPjwvc3ZnPg==" alt=""> Deliver to</span>
+         <div class="delivery input-group  mt-lg-4">
+            <input type="text" placeholder="Enter delivery pincode"><input type="button" value="Check">
+         </div>
+         <h6 class="mt-lg-4">Delivery by18 Sep, Wednesday</h6>
+         <h6 class="small">if ordered before 4:59 PM</h6>
+         <!-- Button trigger modal -->
+        <a type="button" data-bs-toggle="modal" data-bs-target="#secondModal">
+          View Details
+        </a>
+        
+        <!-- Second Modal (Centered) -->
+        <div class="modal fade" id="secondModal" tabindex="-1" aria-labelledby="secondModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="secondModalLabel">Delivery & Installation details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h6 class="mt-lg-4">Delivery by18 Sep, Wednesday</h6>
+         <h6 class="small pt-lg-1">if ordered before 4:59 PM</h6>
+         <h5 class="small text-secondary pt-lg-1">Installation Details</h5>
+         <ul class="pt-lg-2">
+          <li>This product doesn't require installation  </li>
+          <li>Shipping charges are calculated based on the number of units, distance and delivery date.</li>
+          <li> Delivery charges if applicable will be shown on the product page and cart.</li>
+         </ul>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+        
+          </div>
+          <!-- <div class="col-lg-2"></div> -->
+          <div class="col-lg-2"><span>Services</span></div>
+          <div class="col-lg-5">
+            <i class="fas fa-rupee-sign"></i> <span>Cash on Delivery available</span>
+        
+          </div>
+        </div>
+        
+        <div class="row mt-lg-3">
+          <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                  Product Details
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6"><h6>Fit</h6></div>
+                    <div class="col-lg-8 col-sm-4 col-6"><p>Slim Fit</p></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6"> <h6> Occasion</h6></div>
+                    <div class="col-lg-8 col-sm-4 col-6">
+                      <p>Formal</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6">
+                      <h6>Color</h6>
+                    </div>
+                    <div class="col-lg-8 col-sm-4 col-6">
+                      <p>Black</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6">
+                      <h6>Pack of</h6>
+                    </div>
+                    <div class="col-lg-8 col-sm-4 col-6">
+                      <p>1</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6">
+                      <h6>Type</h6>
+                    </div>
+                    <div class="col-lg-8 col-sm-4 col-6">
+                      <p>Casual Trousers</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6">
+                      <h6>Suitable For </h6>
+                    </div>
+                    <div class="col-lg-8 col-sm-4 col-6">
+                      <p>Western Wear</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6"><h6>Belt Loops</h6></div>
+                    <div class="col-lg-8 col-sm-4 col-6"><p>Yes</p></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6"><h6>Rice</h6></div>
+                    <div class="col-lg-8 col-sm-4 col-6"><p>Mid</p></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6"><h6>Pattern</h6></div>
+                    <div class="col-lg-8 col-sm-4 col-6"><p>Textured</p></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6"><h6>Fabric</h6></div>
+                    <div class="col-lg-8 col-sm-4 col-6"><p>Lycra Blend</p></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6"><h6>Closure</h6></div>
+                    <div class="col-lg-8 col-sm-8 col-6"><p>Button</p></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6"><h6>Pleats</h6></div>
+                    <div class="col-lg-8 col-sm-8 col-6"><p>Flat Front</p></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6"><h6>Fabric Care</h6></div>
+                    <div class="col-lg-8 col-sm-8 col-6"><p>Regular Machine Wash</p></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6"> <h6>Fly</h6> </div>
+                    <div class="col-lg-8 col-sm-8 col-6"><p>Zipper</p></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-6"><h6>Net Quantity</h6></div>
+                    <div class="col-lg-8 col-sm-8 col-6"><p>1</p></div>
+                  </div>
+                  <p>This product is made from premium quality material. Durable quality with a premium look makes it a must have on your collection.</p>
+                </div>
+            </div>
+        
+            
+        </div>
+        </div>
+        
+        
+        </div>
+            </div>
+        </div>
+        </section>
+
+
+        <div class="container-fluid gell">
+
+          <h4>Similar Products</h4>
+          <div id="layer"></div>
+          <div id="main" class="mt-4">
+             
+            <ul id="slider">
+              <li>
+              <a href="#"><img src="https://rukminim2.flixcart.com/image/2000/2000/xif0q/trouser/q/x/f/32-araeotr1320-arrow-original-imah2v2ej3dszfzx.jpeg?q=70&crop=false" width="280px"/></a>
+              </li>
+              <li>
+                <a href="#"><img src="https://rukminim2.flixcart.com/image/400/400/xif0q/trouser/a/l/g/32-araeotr1289-arrow-original-imah2qrghdjp99nw.jpeg?q=70" width="250px"/></a>
+              </li>
+              <li>
+               <a href="#"><img src="https://rukminim2.flixcart.com/image/2000/2000/xif0q/trouser/h/y/t/32-araeotr1291-arrow-original-imah2x557dbaevya.jpeg?q=70&crop=false" width="250px"/></a>
+              </li>
+              <li>
+                <a href="#"><img src="https://rukminim2.flixcart.com/image/2000/2000/xif0q/trouser/p/p/b/32-araeotr1345-arrow-original-imah2qratgtyse22.jpeg?q=70&crop=false" width="250px"/></a>
+              </li>
+              <li>
+                <a href="#"><img src="https://rukminim2.flixcart.com/image/2000/2000/xif0q/trouser/a/l/o/32-araeotr1312-arrow-original-imah2qre4gwywcyu.jpeg?q=70&crop=false" width="250px"/></a>
+              </li>
+              <li>
+                <a href="#"><img src="https://rukminim2.flixcart.com/image/400/400/xif0q/trouser/a/l/g/32-araeotr1289-arrow-original-imah2qrghdjp99nw.jpeg?q=70" width="250px"/></a>
+              </li>
+              <li>
+                <a href="#"><img src="https://rukminim2.flixcart.com/image/400/400/xif0q/trouser/w/4/3/32-rmts05368-b8-raymond-original-imahfyh5jghynbbs.jpeg?q=70" width="250px"/></a>
+              </li>
+                <li>
+                  <a href="#"><img src="https://rukminim2.flixcart.com/image/400/400/xif0q/trouser/h/o/x/32-araeotr1314-arrow-original-imah2w2dvdwhyp7a.jpeg?q=70" width="250px"/></a>
+                </li>
+            </ul>
+          </div>
+      
+        </div>
+
+    </main>
+
+
+      
+
+
+
+
+    <footer class="footer-section">
+      <div class="container-fluid pb-lg-3">
+        <hr>
+  
+        <div class="row pb-lg-3">
+          <div class="col-lg-3 col-sm-12">
+            <a href="#" class="foot-logo">My Logo</a>
+            <address class="foot-address">Address: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, tempora! </address>
+            <h6 class="foot-email-number">Email: <a href="mailto:demo@gmail.com">demo@gmail.com</a> </h6>
+            <h6 class="foot-email-number">Phone: <a href="tel:+1234567890">1234567890</a></h6>
+            <a href="#" class="foot-direction">Get Direction <i class="fas fa-arrow-right"></i></a>
+            <div class="foot-icon">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram"></i>
+  
+            </div>
+          </div>
+          <div class="col-lg-1 col-sm-1"></div>
+          <div class="col-lg-2 col-sm-5 col-7 foot-help mt-lg-0 mt-5">
+            <h4>Help</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#"> Returns + Exchanges</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#"> FAQ’s </a></li>
+              <li><a href="#"> Compare </a></li>
+              <li><a href="#"> My Wishlist</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-6 col-sm-5 foot-help mt-lg-0 mt-5">
+  <h4>Pages</h4>
+  <ul class="list-unstyled">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Product</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact</a></li>
+  
+  </ul>
+          </div>
+          <div class="col-lg-3 foot-sign-email">
+            <h3>Sign Up for Email</h3>
+            <p>Sign up to get first dibs on new arrivals, sales, exclusive content, events and more!</p>
+            <div class="input-group foot-subscribe">
+              <input type="email" placeholder="Enter Your Email..">
+              <button type="button">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="foot-copy-right">
+          <div class="row">
+            <div class="col-lg-4 col-sm-6">
+  <p>© 2024 Ecomus Store. All Rights Reserved</p>
+            </div>
+            <div class="col-lg-5 col-sm-1"></div>
+            <div class="col-lg-3 col-sm-5 d-flex align-items-center justify-content-center" >
+              <img src="https://themesflat.co/html/ecomus/images/payments/visa.png" alt="">
+              <img src="https://themesflat.co/html/ecomus/images/payments/img-1.png" alt="">
+              <img src="https://themesflat.co/html/ecomus/images/payments/img-2.png" alt="">
+              <img src="https://themesflat.co/html/ecomus/images/payments/img-3.png" alt="">
+              <img src="https://themesflat.co/html/ecomus/images/payments/img-4.png" alt="">
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+   <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script> -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+   <!-- <script src="http://rawgithub.com/aamirafridi/jQuery.Marquee/master/jquery.marquee.min.js?v=4"type="text/javascript"></script> -->
+   
+   <!-- Custom JS for background color on scrolling -->
+ <script src="script.js"></script>
+
+   <script src="slider.js"></script>
+
+
+
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var show_products = document.querySelector('.show-products');
+        var show_products_fullscreen = document.querySelector('.show-products-fullscreen');
+        var show_products_fullscreenImage = document.querySelector('.show-products-fullscreen img');
+        var images = document.querySelectorAll('.show-products img');
+        var currentImageIndex = 0;
+    
+        // Show fullscreen image on click
+        show_products.addEventListener('click', function(event) {
+            if (event.target.tagName === 'IMG') {
+                show_products_fullscreenImage.src = event.target.src;
+                show_products_fullscreen.style.display = 'flex';
+                currentImageIndex = Array.from(images).indexOf(event.target);
+            }
+        });
+    
+        // Hide fullscreen on click outside of the image
+        show_products_fullscreen.addEventListener('click', function(event) {
+            if (event.target.tagName !== 'IMG') {
+                show_products_fullscreen.style.display = 'none';
+            }
+        });
+    
+        // Navigate images
+        function navigate(direction) {
+            currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+            show_products_fullscreenImage.src = images[currentImageIndex].src;
+        }
+    
+        document.querySelector('.prev').addEventListener('click', function() {
+            navigate(-1);
+        });
+    
+        document.querySelector('.next').addEventListener('click', function() {
+            navigate(1);
+        });
+    
+        // Arrow key navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowLeft') {
+                navigate(-1);
+            } else if (event.key === 'ArrowRight') {
+                navigate(1);
+            } else if (event.key === 'Escape') {
+                show_products_fullscreen.style.display = 'none';
+            }
+        });
+    });
+    
+
+
+    </script>
+
+
+<script>
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+accordionHeaders.forEach(header => {
+header.addEventListener('click', function () {
+    const content = this.nextElementSibling;
+
+    // Close other accordions
+    accordionHeaders.forEach(item => {
+        if (item !== this && item.classList.contains('active')) {
+            item.classList.remove('active');
+            let otherContent = item.nextElementSibling;
+            otherContent.style.maxHeight = null; // Close it
+        }
+    });
+
+    // Toggle the clicked accordion
+    this.classList.toggle('active');
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null; // Close
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px"; // Open and auto-adjust height
+    }
+});
+});
+</script>
+
+
+      <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+  <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+  <!-- <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+  ></script> -->
+
+  <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+</body>
+
+</html>
